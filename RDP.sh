@@ -8,6 +8,7 @@ sed -i 's/\/bin\/sh/\/bin\/bash/g' /etc/passwd
 sudo apt-get update
 sudo apt-get install vim-gnome
 sudo apt-get install vlc
+sudo apt-get install nload
 sudo apt install qbittorrent
 sudo apt-get install xarchiver
 wget https://dl.google.com/linux/direct/chrome-remote-desktop_current_amd64.deb
