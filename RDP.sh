@@ -6,6 +6,12 @@ sudo adduser RDP sudo
 echo 'RDP:1234' | sudo chpasswd
 sed -i 's/\/bin\/sh/\/bin\/bash/g' /etc/passwd
 sudo apt-get update
+sudo dpkg --add-architecture i386
+wget -nc https://dl.winehq.org/wine-builds/Release.key
+sudo apt-key add Release.key
+sudo apt-add-repository https://dl.winehq.org/wine-builds/ubuntu/ 
+sudo apt-add-repository 'deb https://dl.winehq.org/wine-builds/ubuntu/ artful main'
+sudo apt-get install --install-recommends winehq-stable
 sudo apt-get install vim-gnome
 sudo apt-get install vlc
 sudo apt-get install nload
