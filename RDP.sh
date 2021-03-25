@@ -6,7 +6,7 @@ sudo adduser RDP sudo
 echo 'RDP:1234' | sudo chpasswd
 sed -i 's/\/bin\/sh/\/bin\/bash/g' /etc/passwd
 sudo apt-get update
-sudo apt-get install vim-gnome
+sudo apt-get install vim-athena
 sudo apt-get install vlc
 sudo apt-get install nload
 sudo apt install qbittorrent
