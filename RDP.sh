@@ -6,7 +6,7 @@ sudo adduser RDP sudo
 echo 'RDP:1234' | sudo chpasswd
 sed -i 's/\/bin\/sh/\/bin\/bash/g' /etc/passwd
 sudo apt-get update
-sudo apt-get install vim-athena
+sudo apt-get install vim-gnome
 sudo apt-get install vlc
 sudo apt-get install nload
 sudo apt install qbittorrent
@@ -15,9 +15,9 @@ wget https://dl.google.com/linux/direct/chrome-remote-desktop_current_amd64.deb
 sudo dpkg --install chrome-remote-desktop_current_amd64.deb
 sudo apt install --assume-yes --fix-broken
 sudo DEBIAN_FRONTEND=noninteractive \
-apt install --assume-yes xfce4 desktop-base
+apt install --assume-yes xfce4 desktop-base xfce4-terminal
 sudo bash -c 'echo "exec /etc/X11/Xsession /usr/bin/xfce4-session" > /etc/chrome-remote-desktop-session'  
-sudo apt install --assume-yes xscreensaver
+sudo apt remove --assume-yes gnome-terminal
 sudo systemctl disable lightdm.service
 wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
 sudo dpkg --install google-chrome-stable_current_amd64.deb
